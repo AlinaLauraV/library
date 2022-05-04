@@ -39,4 +39,4 @@
         If the book is on loan by another User, current User sees disabled button
         If the book is on loan by the current User, on clicking the button, the book is returned
 
-
+Plus email and chat functionality
