@@ -1,3 +1,3 @@
 
-EMAIL_HOST_USER='quizzapp55@gmail.com'
-EMAIL_HOST_PASSWORD='Lap3Project'
+EMAIL_HOST_USER='your email'
+EMAIL_HOST_PASSWORD='your password'
