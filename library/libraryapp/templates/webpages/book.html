@@ -1,0 +1,28 @@
+{% extends "webpages/base.html" %}
+
+{% block content %}
+
+<h1>Book</h1>
+
+<ul>
+    <li>
+        <a href="{% url 'library-book' id=book.id %}">{{book.title}}</a>
+    </li>
+</ul>
+
+{% if not book.owner %}
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Own book!">
+</form>
+{% else %}
+    {% if book.owner == user %}
+        <div>Thank you for borrowing me!</div>
+    {% else %}
+        <div>I have been adopted by {{book.owner.username}}!</div>
+    {% endif %}
+{% endif %}
+
+
+{% endblock content %}
